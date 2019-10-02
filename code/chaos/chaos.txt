@@ -1,0 +1,59 @@
+int value = 0;
+int count = 20;
+float[] speedX = new float[count];
+float[] speedY = new float[count];
+float[] bLocX = new float[count];
+float[] bLocY = new float[count];
+int[] colors = new int[count];
+int[] colorsR = new int[count];
+int[] colorsG = new int[count];
+int[] colorsB = new int[count];
+int[] alpha = new int[count];
+
+void setup() {
+size(500, 500); 
+background(225);
+
+for (int i = 0; i < speedX.length; i++) { 
+  speedX[i] = random(-2,2);
+  speedY[i] = random(-2,2);
+  bLocX[i] = height/2;
+  bLocY[i] = width/2;
+  colors[i] = int(random(0, 255));
+  colorsR[i] = int(random(0, 255));
+  colorsG[i] = int(random(0, 255));
+  colorsB[i] = int(random(0, 255));
+  alpha[i] = int(random(50, 255));
+ }
+} 
+
+void draw() {
+//background(255);
+
+int m = millis();
+  noStroke();
+  fill(m % 255);
+  rect(25, 25, 50, 50);
+  rect(100, 100, 50, 50);
+  rect(175, 175, 50, 50);
+  rect(250, 250, 50, 50);
+  rect(325, 325, 50, 50);
+  rect(400, 400, 50, 50);
+  
+for (int i = 0; i < speedX.length; i++) {
+  
+  bLocX[i] += speedX[i];
+  bLocY[i] += speedY[i];
+  
+  fill(colorsR[i],colorsG[i],colorsB[i],alpha[i]); 
+  ellipse(bLocX[i], bLocY[i], 20, 20);
+
+  if ((bLocX[i] < 0) || (bLocX[i] > width)) {
+  speedX[i] = -speedX[i];
+  }
+  if ((bLocY[i] < 0) || (bLocY[i] > height)) {
+  speedY[i] = -speedY[i];
+  }
+}
+//saveFrame("frames/work_in_process_######.png");
+} 

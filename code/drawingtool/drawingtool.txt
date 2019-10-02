@@ -1,0 +1,98 @@
+char currentkey = '1';
+
+color bgc = color(255, 239, 250);
+
+void setup() {
+
+size(400, 400);
+background(bgc);
+smooth();
+}
+
+void draw() {
+  if(keyPressed) {
+  clear_print(); 
+}
+
+if(mousePressed) {
+  drawChoice(); 
+}
+
+  //saveFrame("frames/Project1_drawingtool_######.png");
+}
+
+void drawChoice() {
+  
+  char currentkey = key;
+
+switch(currentkey) {
+  
+case '1': 
+  println("2");  // fat tan line
+  drawFatLine(color(237, 193, 151), mouseX, mouseY, pmouseX, pmouseY);
+  break;
+  
+ case '2':
+   println("1"); //random circles 
+   noStroke();
+   fill(random(200),random(80),random(160));
+   ellipse(mouseX,mouseY,20,20);
+   break;
+   
+ case '3': 
+   println("2");  //brown line
+   drawline(color(86, 42, 11), mouseX, mouseY, pmouseX, pmouseY);
+   break;
+   
+ case '4': 
+  println("2");  // fat red line
+  drawFatLine(color(255,0,0), mouseX, mouseY, pmouseX, pmouseY);
+  break;
+  
+ case '6': 
+  println("2");  // erase with bg color
+  noStroke();
+  fill(bgc);
+  eraser(bgc,mouseX, mouseY,25);
+  break;
+  
+  default:             
+  println("None");  
+  break;   
+}
+
+}
+
+void drawline(color k, int lx,int ly, int px,int py) {
+  strokeWeight(2);
+  stroke(k);
+  line(lx, ly, px, py); 
+}
+
+void drawFatLine(color k, int lx,int ly, int px,int py) {
+  strokeWeight(10);
+  stroke(k);
+  line(lx, ly, px, py); 
+}
+
+
+void eraser(color k,int lx,int ly,int sz) {
+  stroke(k);
+  ellipse(lx, ly, sz,sz); 
+}
+
+
+void clear_print() {
+
+  if (key == 'x' || key == 'X') { 
+     background(225); 
+     
+  } else if (key == 'p' || key == 'P') { 
+    
+    
+     saveFrame("rm_paint.png"); 
+     delay(500);
+  }
+
+
+}

@@ -1,0 +1,45 @@
+float u;
+
+void setup() {
+  size(600,600);
+  background(#e0b610);
+  u = 400;
+}
+
+void draw() {
+ stroke(#107dea);
+ line(0, 50, width, 50); 
+ line(0, 150, width, 150); 
+ line(0, 250, width, 250); 
+ line(0, 350, width, 350);
+ line(0, 450, width, 450);
+ line(0, 550, width, 550);
+  
+ stroke(255);
+ 
+ float x = 0;
+ while (x < width) {
+   point(x, 50 + 20 * sin(x/15));
+   point(x, 150 + 20 * sin(x/20));
+   point(x, 250 + 20 * sin(x/15));
+   point(x, 350 + 20 * sin(x/20));
+   point(x, 450 + 20 * sin(x/15));
+   point(x, 550 + 20 * sin(x/15));
+   x = x + 1;
+ }
+ 
+
+   noStroke();
+   u = u + 20;
+  
+  if( u > width){
+    u = 0;
+  }
+  fill(random(255), random(255), 255);
+  ellipse(u, 300, 50, 50);
+  ellipse(u, 400, 50, 50);
+  ellipse(u, 500, 50, 50);
+  
+  //saveFrame("frames/sinewave_moivingcircles_######.png");
+  }
+ 

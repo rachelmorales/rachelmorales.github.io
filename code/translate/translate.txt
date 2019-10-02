@@ -1,0 +1,48 @@
+float system = 0;
+float b = 8;
+
+
+void setup() {
+  size(500,500);
+  background(0);
+  noStroke();
+
+}
+
+
+void draw() {
+  background(0);
+  
+  
+  
+   translate(width/2, height/2);
+   fill(4, 229, 71);
+   rotate(system);
+   rectMode(CENTER);
+   rect(0,0,70,70);
+   
+   
+  
+  pushMatrix();
+    rotate(system);
+    translate(100, 0);
+    fill(225, 4, 229);
+    ellipse(20, 20, 32, 32);
+  popMatrix();
+  
+ 
+  translate(0, 180);
+  fill(13, 224, 224);
+  ellipse(0,0,50,50);
+  ellipse(0,0,b,b);
+  b++;
+  
+
+  if (b > width) {
+   b = 0; 
+  }
+
+  system += 0.1;
+  
+  //saveFrame("frames/System_PushPop_######.png");
+}

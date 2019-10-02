@@ -1,0 +1,39 @@
+int value = 0; 
+PFont f; 
+float d = 20;
+
+void setup() { 
+  size(600, 600);
+  smooth();
+  printArray(PFont.list());
+  f = createFont("Georgia", 26);
+  textFont(f);
+ 
+} 
+
+void draw() { 
+  background(#f9f9de-#109691); 
+  
+  fill(value); 
+  ellipse(width/2, height/2, 100, 100);
+  ellipse(width/4, height/4, 20, 20);
+  
+  fill(#466fdb);
+  text("Howdy, press r", mouseX, mouseY, d, d);
+  if (mousePressed){
+   d++; 
+  }
+  
+  saveFrame("frames/toggletext_######.png");
+} 
+
+void keyPressed() { 
+
+  if ( key == 'r' || key == 'R' ) { 
+    if (value == 0) { 
+      value = #d7db15;
+    } else { 
+      value = 0;
+    }
+  }
+}

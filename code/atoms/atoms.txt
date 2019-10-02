@@ -1,0 +1,87 @@
+int totalFrames = 120;
+int counter = 0;
+boolean record = false;
+
+Atom[] atoms = new Atom[100];
+
+class Atom {
+ NoiseLoop xNoise;
+ NoiseLoop yNoise; 
+ NoiseLoop dNoise;
+ NoiseLoop rNoise;
+ NoiseLoop bNoise;
+ 
+ Atom() {
+   xNoise = new NoiseLoop(0.3, -width, width*2);
+   yNoise = new NoiseLoop(0.3, -height, height*2); 
+   dNoise = new NoiseLoop(2, 10, 120); 
+   rNoise = new NoiseLoop(2, 100, 255);
+   bNoise = new NoiseLoop(2, 100, 255);
+ }
+ 
+  void render(float a) {
+   noStroke();
+   float x = xNoise.value(a);
+   float y = yNoise.value(a);
+   float d = dNoise.value(a);
+   float r = rNoise.value(a);
+   float b = bNoise.value(a);
+   fill(r, 50, b, 200);
+   circle(x, y, d); 
+ }
+ 
+}
+
+class NoiseLoop {
+  float diameter;
+  float min,max;
+  float cx;
+  float cy;
+  
+  NoiseLoop(float diameter, float min, float max) {
+    this.diameter = diameter;
+    this.min = min;
+    this.max = max;
+    cx = random(1000);
+    cy = random(1000);
+  }
+  
+  
+  float value(float a) {
+    float xoff = map(cos(a), -1, 1, cx, cx + diameter);
+    float yoff = map(sin(a), -1, 1, cy, cy + diameter);
+    float r = noise(xoff, yoff);
+    return map(r, 0, 1, min, max);
+  }
+}
+
+void setup() {
+ size(600,600); 
+  
+  for (int i = 0; i < atoms.length; i++) {
+    atoms[i] = new Atom();
+  }
+}
+
+void draw () {
+  float percent = 0;
+  if (record) {
+   percent = float(counter) / totalFrames;
+  } else {
+    percent = float(counter % totalFrames) / totalFrames;
+  }
+  render(percent);
+  
+  counter++;
+  
+  //saveFrame("frames/Project_2_######.png");
+}
+
+void render(float percent) {
+  background(0);
+ float a = percent * TWO_PI;
+ for (Atom p : atoms) {
+   p.render(a);
+ }
+
+}
