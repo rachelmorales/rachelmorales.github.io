@@ -14,12 +14,9 @@
   <!-- CSS & JS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
   <script type="text/javascript" src="css/overlaypopup.js"> </script>
-  <!-- <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/overlaypopup.css" />
-  <link rel="stylesheet" href="css/custom.css">
-  <link rel="stylesheet" href="css/nu_main.css"> -->
+
   <link rel="stylesheet" href="css/index.css">
+
 </head>
 
 
@@ -35,7 +32,7 @@
     <a href="sculpture.html">Sculpture</a>
     <a href="photoshop.html">Photoshop</a>
     <a href="processing.html">Processing</a>
-    <a href="video.html">Video</a>
+    <!-- <a href="video.html">Video</a> -->
     <a href="3d.html">3D</a>
     <a href="netart.html">Net Art</a>
 
@@ -43,110 +40,83 @@
     <a href="index.html">Main</a>
   </div>
 
-
-
-
-  <!-- <div class="main">
+  <div style="text-align:center">
     <h2>Drawings</h2>
-    <h5>abstract charcoal</h5>
-    <div class="img">
-      <img src="images/drawing/abstractcharcoal.jpg" style="width:12%" alt="">
-    </div>
-    <p>Some text..</p>
-    <p>description</p>
-    <br>
-
-    <h5>charcoal hands</h5>
-    <div class="img">
-      <img src="images/drawing/charcoalhands.jpg" style="width:22%" alt="">
-    </div>
-    <br>
-
-    <h5>charcoal sheet</h5>
-    <div class="img">
-      <img src="images/drawing/charcoalsheet.jpg" style="width:14%" alt="">
-    </div>
-    <br>
-
-    <h5>charcoal still life</h5>
-    <div class="img">
-      <img src="images/drawing/charcoalstill1.jpg" style="width:21%" alt="">
-      <br>
-      <img src="images/drawing/charcoalstill2.jpg" style="width:25%" alt="">
-    </div>
-    <br>
-
-    <h5>line drawing</h5>
-    <div class="img">
-      <img src="images/drawing/linedrawingsstill.jpg" style="width:15%" alt="">
-      <br>
-      <img src="images/drawing/linedrawingsvase.jpg" style="width:15%" alt="">
-    </div>
-    <br> -->
-
-  <!-- </div> -->
-
-
-  <!-- 2nd one  -->
-  <div class="main">
-    <h2>Drawings</h2>
-
-    <div class="gallery">
-      <a target="_blank" href="images/drawing/abstractcharcoal.jpg">
-        <img src="images/drawing/abstractcharcoal.jpg" alt="Cinque Terre" width="600" height="400">
-      </a>
-      <div class="desc">abstract charcoal</div>
-    </div>
-
-    <div class="gallery">
-      <a target="_blank" href="images/drawing/charcoalhands.jpg">
-        <img src="images/drawing/charcoalhands.jpg" alt="Forest" width="600" height="400">
-      </a>
-      <div class="desc">charcoal hands</div>
-    </div>
-
-    <div class="gallery">
-      <a target="_blank" href="images/drawing/charcoalsheet.jpg">
-        <img src="images/drawing/charcoalsheet.jpg" alt="Northern Lights" width="600" height="400">
-      </a>
-      <div class="desc">charcoal sheet</div>
-    </div>
-
-    <div class="gallery">
-      <a target="_blank" href="images/drawing/charcoalstill1.jpg">
-        <img src="images/drawing/charcoalstill1.jpg" alt="Mountains" width="600" height="400">
-      </a>
-      <div class="desc">charcoal still life</div>
-    </div>
-
-    <div class="gallery">
-      <a target="_blank" href="images/drawing/charcoalstill2.jpg">
-        <img src="images/drawing/charcoalstill2.jpg" alt="Mountains" width="600" height="400">
-      </a>
-      <div class="desc">charcoal still life</div>
-    </div>
-
-    <div class="gallery">
-      <a target="_blank" href="images/drawing/linedrawingsstill.jpg">
-        <img src="images/drawing/linedrawingsstill.jpg" alt="Mountains" width="600" height="400">
-      </a>
-      <div class="desc">line drawing</div>
-    </div>
-
-    <div class="gallery">
-      <a target="_blank" href="images/drawing/linedrawingsvase.jpg">
-        <img src="images/drawing/linedrawingsvase.jpg" alt="Mountains" width="600" height="400">
-      </a>
-      <div class="desc">line drawing</div>
-    </div>
   </div>
 
+  <!-- hover code, place image inside -->
+  <!-- <div class="container">
+    <img src="img_avatar.png" alt="Avatar" class="image" style="width:100%">
+    <div class="middle">
+      <div class="text">John Doe</div>
+    </div>
+  </div> -->
 
 
-  <!-- <div class="footer">
-      <h2>Footer</h2>
+
+
+  <!-- Photo Grid -->
+  <div class="row">
+
+    <div class="column">
+      <div class="container">
+        <img src="images/drawing/abstractcharcoal.jpg" class="image" style="width:100%">
+        <div class="middle">
+          <div class="text">charcoal abstract</div>
+        </div>
+      </div>
     </div>
 
+    <div class="column">
+      <div class="container">
+        <img src="images/drawing/charcoalhands.jpg" class="image" style="width:100%">
+        <div class="middle">
+          <div class="text">charcoal hands</div>
+        </div>
+      </div>
+      <div class="container">
+        <img src="images/drawing/linedrawingsstill.jpg" class="image" style="width:100%">
+        <div class="middle">
+          <div class="text">still line drawing</div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="column">
+      <div class="container">
+        <img src="images/drawing/charcoalsheet.jpg" class="image" style="width:100%">
+        <div class="middle">
+          <div class="text">charcoal sheet</div>
+        </div>
+      </div>
+      <div class="container">
+        <img src="images/drawing/charcoalstill2.jpg" class="image" style="width:100%">
+        <div class="middle">
+          <div class="text">charcoal still</div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="column">
+      <div class="container">
+        <img src="images/drawing/charcoalstill1.jpg" class="image" style="width:100%">
+        <div class="middle">
+          <div class="text">charcoal still</div>
+        </div>
+      </div>
+      <div class="container">
+        <img src="images/drawing/linedrawingsvase.jpg" class="image" style="width:100%">
+        <div class="middle">
+          <div class="text">vase line drawing</div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
 
 
 </body>
