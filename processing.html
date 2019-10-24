@@ -46,21 +46,78 @@
     </div>
 
 
-    <!-- Photo Grid -->
+    <!-- Photo Rows -->
+
+    <!-- colu 1 -->
     <div class="responsive">
       <div class="gallery">
         <a target="_blank" href="video/movingcircles.mp4">
           <img src="images/processing/movingcircles.png" class="image" style="width:100%">
         </a>
         <div class="desc">Moving Circles</div>
-        <div class="desc">This is the first sketch I have created with processing. It includes a sine wave as well as while and if statements. The while statements controls the points in which the sine waves are set at. I
-          alternated the lengths of the waves. The if
-          statements controls the three rows of random flashing colored ellipses that repeats on the opposite side of the border when hitting the other.</div>
+        <div class="desc">This sketch includes sine wave, while, and if staements. The while statements control the points in which the
+          sine waves are set at. I alternated the lengths of the waves. The if statements controls the three rows of random
+          flashing colored ellipses that reset once they reach the opposite side of the border.</div>
+        <!-- ////////////////// -->
+        <a target="_blank" href="video/forloop.mp4">
+          <img src="images/processing/forloop.png" class="image" style="width:100%">
+        </a>
+        <div class="desc">Flashing Squares</div>
+        <div class="desc">In this sketch I demonstrated a for loop. I created a grid of different shaded rectangles with an x and y value in one for loop that was nested inside another for loop. In a draw void I created
+          another rectangle drawing that randomly selects a rectangle of x and y to alternate colors.</div>
+      </div>
+
+    </div>
+
+    <!-- colu 2 -->
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="video/drawingtool.mp4">
+          <img src="images/processing/drawingtool.png" class="image" style="width:100%">
+        </a>
+        <div class="desc">Drawing Tool</div>
+        <div class="desc">For my drawing tool project I have created a sweet machine consisting of 5 drawing tools. I have a fat tan brush (key 1), a random colored ellipse brush (key 2), a skinny brown brush (key 3), a fat red
+          brush (key 4), and an eraser brush
+          (key 5). I have raise stroke weights and changed background color and matched that color with the eraser tool.</div>
+        <a target="_blank" href="video/toggletext.mp4">
+          <img src="images/processing/toggletext.png" class="image" style="width:100%">
+        </a>
+        <div class="desc">Toggle Text</div>
+        <div class="desc">This is the second sketch I have finished with processing. It includes a toggle feature with the trigger key R nested inside an if statement. I also made a text that follows the mouse and slowly reveals
+          itself through an if statement of
+          d++ when clicked down.</div>
       </div>
     </div>
 
+
+    <!-- colu 3 -->
     <div class="responsive">
       <div class="gallery">
+        <a target="_blank" href="video/atoms.mp4">
+          <img src="images/processing/atoms.png" class="image" style="width:100%">
+        </a>
+        <div class="desc">Atoms</div>
+        <div class="desc">For this sketch the algorithm that I chose to focus on was Perlin Noise. I created two custom classes: Atom and Noiseloop. In the Atom class I defined the position, diameter, and red and blue color values of a
+          circle shape. In the
+          Noiseloop class I randomized those values that I declared in the Atom class.</div>
+        <a target="_blank" href="video/translate.mp4">
+          <img src="images/processing/translate.png" class="image" style="width:100%">
+        </a>
+        <div class="desc">Translate</div>
+        <div class="desc">This is the second sketch I have finished with processing. It includes a toggle feature with the trigger key R nested inside an if statement. I also made a text that follows the mouse and slowly reveals
+          itself through an if statement of
+          d++ when clicked down.</div>
+      </div>
+    </div>
+
+    <!-- colu 4 -->
+    <div class="responsive">
+      <div class="gallery">
+        <!-- <a target="_blank" href="video/atoms.mp4"> -->
+        <img src="images/processing/xoxgrid.png" class="image" style="width:100%">
+        </a>
+        <div class="desc">XOX Grid</div>
+        <div class="desc">This is what I created for data and grid mapping excerise. The design spells out XOX.</div>
         <a target="_blank" href="video/chaos.mp4">
           <img src="images/processing/chaos.png" class="image" style="width:100%">
         </a>
@@ -70,97 +127,6 @@
           speedX, and speedY values to bounce off the edges of the workspace. There are 20 balls that are set to move and generate random colors that leave a lasting trail behind. I also included a diagonal set of rectangles to flash using the
           millis command.</div>
       </div>
-    </div>
-
-
-    <div class="row">
-
-      <div class="column">
-
-        <div class="container">
-          <a href="video/chaos.mp4"> <img src="images/processing/chaos.png" class="image" style="width:100%" /></a>
-          <div class="middle">
-            <div class="text">Chaos<br>
-              <!-- In the first example I learned how to condense arrays and later define them in an efficient way. I used low and high arguments in my speedX and speedY variables to generate random speeds. I used if statements
-              to reset my blocX, blocY,
-              speedX, and speedY values to bounce off the edges of the workspace. There are 20 balls that are set to move and generate random colors that leave a lasting trail behind. I also included a diagonal set of rectangles to flash using the
-              millis command. -->
-              <a href="code/chaos/chaos.txt">see code</a></div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="column">
-        <div class="container">
-          <a href="video/atoms.mp4"> <img src="images/processing/atoms.png" class="image" style="width:100%"></a>
-          <div class="middle">
-            <div class="text">Atoms<br>
-              <!-- For this sketch the algorithm that I chose to focus on was Perlin Noise. I created two custom classes: Atom and Noiseloop. In the Atom class I defined the position, diameter, and red and blue color values of a
-              circle shape. In the
-              Noiseloop class I randomized those values that I declared in the Atom class. -->
-              <a href="code/atoms/atoms.txt">see code</a></div>
-          </div>
-        </div>
-        <div class="container">
-          <a href="video/toggletext.mp4"> <img src="images/processing/toggletext.png" class="image" style="width:100%"></a>
-          <div class="middle">
-            <div class="text">Toggle Text<br>
-              <!-- This is the second sketch I have finished with processing. It includes a toggle feature with the trigger key R nested inside an if statement. I also made a text that follows the mouse and slowly reveals
-              itself through an if statement of
-              d++ when clicked down. -->
-              <a href="code/toggletext/toggletext.txt">see code</a></div>
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="column">
-        <div class="container">
-          <a href="video/forloop.mp4"> <img src="images/processing/forloop.png" class="image" style="width:100%"></a>
-          <div class="middle">
-            <div class="text">Flashing Squares<br>
-              <!-- In this sketch I demonstrated a for loop. I created a grid of different shaded rectangles with an x and y value in one for loop that was nested inside another for loop. In a draw void I created
-              another rectangle drawing that randomly selects a rectangle of x and y to alternate colors. -->
-              <a href="code/forloop/forloop.txt">see code</a></div>
-          </div>
-        </div>
-        <div class="container">
-          <a href="video/drawingtool.mp4"> <img src="images/processing/drawingtool.png" class="image" style="width:100%"></a>
-          <div class="middle">
-            <div class="text">Drawing Tool<br>
-              <!-- For my drawing tool project I have created a sweet machine consisting of 5 drawing tools. I have a fat tan brush (key 1), a random colored ellipse brush (key 2), a skinny brown brush (key 3), a fat red
-              brush (key 4), and an eraser brush
-              (key 5). I have raise stroke weights and changed background color and matched that color with the eraser tool. -->
-              <a href="code/drawingtool/drawingtool.txt">see code</a></div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="column">
-        <div class="container">
-          <a href="video/translate.mp4"> <img src="images/processing/translate.png" class="image" style="width:100%"></a>
-          <div class="middle">
-            <div class="text">Translate<br>
-              <!-- This is the second sketch I have finished with processing. It includes a toggle feature with the trigger key R nested inside an if statement. I also made a text that follows the mouse and slowly reveals
-              itself through an if statement of
-              d++ when clicked down. -->
-              <a href="code/translate/translate.txt">see code</a></div>
-          </div>
-        </div>
-        <div class="container">
-          <img src="images/processing/xoxgrid.png" class="image" style="width:100%">
-          <div class="middle">
-            <div class="text">XOX Grid<br>
-              <!-- This is what I created for data and grid mapping excerise. The design spells out XOX. -->
-            </div>
-          </div>
-        </div>
-      </div>
-
-
     </div>
 
 
