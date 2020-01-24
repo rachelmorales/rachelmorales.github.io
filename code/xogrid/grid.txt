@@ -1,0 +1,85 @@
+
+
+// example #2.2
+// this is a 7x7 array
+var gridarr = [
+  [1, 0, 0, 0, 0, 0, 1],
+  [0, 1, 0, 0, 0, 1, 0],
+  [0, 0, 1, 0, 1, 0, 0],
+  [0, 0, 0, 1, 0, 0, 0],
+  [0, 0, 1, 0, 1, 0, 0],
+  [0, 1, 0, 0, 0, 1, 0],
+  [1, 0, 0, 0, 0, 0, 1]
+];
+
+var gridarr2 = [
+  [0, 0, 1, 1, 1, 0, 0],
+  [0, 1, 0, 0, 0, 1, 0],
+  [1, 0, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 0, 1],
+  [0, 1, 0, 0, 0, 1, 0],
+  [0, 0, 1, 1, 1, 0, 0]
+];
+
+var gridarr3 = [
+  [1, 0, 0, 0, 0, 0, 1],
+  [0, 1, 0, 0, 0, 1, 0],
+  [0, 0, 1, 0, 1, 0, 0],
+  [0, 0, 0, 1, 0, 0, 0],
+  [0, 0, 1, 0, 1, 0, 0],
+  [0, 1, 0, 0, 0, 1, 0],
+  [1, 0, 0, 0, 0, 0, 1]
+];
+
+
+
+var a = 0;
+
+function setup() {
+  createCanvas(680, 230);
+  background(11, 79, 94);
+
+  for (var i = 0; i < 7; i++) {
+  for (var j = 0; j < 7; j++) {
+      a = gridarr[i][j]; //i represents the row, j represents the item
+      if (a === 1) {      //if value is i, then make certain color
+        fill(204, 10, 105);
+      } else {
+        fill(255, 206, 230);  //if else then make this color
+      }
+
+      rect((j * 30) + 15, (i * 30) + 15, 20, 20);
+    }
+  }
+
+
+  for (var i = 0; i < 7; i++) {
+  for (var j = 0; j < 7; j++) {
+      a = gridarr2[i][j]; //i represents the row, j represents the item
+      if (a === 1) {      //if value is i, then make certain color
+        fill(204, 10, 105);
+      } else {
+        fill(255, 206, 230);  //if else then make this color
+      }
+
+      rect((j * 30) + 240, (i * 30) + 15, 20, 20);
+    }
+  }
+
+
+  for (var i = 0; i < 7; i++) {
+  for (var j = 0; j < 7; j++) {
+      a = gridarr3[i][j]; //i represents the row, j represents the item
+      if (a === 1) {      //if value is i, then make certain color
+        fill(204, 10, 105);
+      } else {
+        fill(255, 206, 230);  //if else then make this color
+      }
+
+      rect((j * 30) + 465, (i * 30) + 15, 20, 20);
+    }
+  }
+
+
+}
