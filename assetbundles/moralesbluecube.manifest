@@ -1,0 +1,29 @@
+ManifestFileVersion: 0
+CRC: 901304411
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 324fe6800fe0170e3a4469e96b74078f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 7755ddc3fb25772bc7120beb7f8ba0ad
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 135
+  Script: {instanceID: 0}
+Assets:
+- Assets/Prefabs/moralesSphere.prefab
+Dependencies:
+- /Users/rmorales7841/Desktop/Spring2020/178/MoralesAssetbundletest/Assets/AssetBundles/createassetbundle
